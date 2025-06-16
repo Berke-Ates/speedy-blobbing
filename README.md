@@ -52,11 +52,14 @@ If `ONLY_RAW_KERNEL_TIMES` is set to `true`. then the script will generate a `ke
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@Article{HansonSpeedy,
-      author       = {Hanson, Alex and Tu, Allen and Lin, Geng, and Singla, Vasu and Zwicker, Matthias and Goldstein, Tom},
-      title        = {Speedy-Splat: Fast 3D Gaussian Splatting with Sparse Pixels and Sparse Primitives},
-      journal      = {arXiv},
-      year         = {2024}
+    <pre><code>@InProceedings{HansonSpeedy,
+    author    = {Hanson, Alex and Tu, Allen and Lin, Geng and Singla, Vasu and Zwicker, Matthias and Goldstein, Tom},
+    title     = {Speedy-Splat: Fast 3D Gaussian Splatting with Sparse Pixels and Sparse Primitives},
+    booktitle = {Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR)},
+    month     = {June},
+    year      = {2025},
+    pages     = {21537-21546}
+    url       = {https://speedysplat.github.io/}
 }</code></pre>
   </div>
 </section>
