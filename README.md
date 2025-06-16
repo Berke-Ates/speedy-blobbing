@@ -58,7 +58,7 @@ If `ONLY_RAW_KERNEL_TIMES` is set to `true`. then the script will generate a `ke
     booktitle = {Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR)},
     month     = {June},
     year      = {2025},
-    pages     = {21537-21546}
+    pages     = {21537-21546},
     url       = {https://speedysplat.github.io/}
 }</code></pre>
   </div>
