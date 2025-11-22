@@ -62,6 +62,31 @@ If `ONLY_RAW_KERNEL_TIMES` is set to `true`. then the script will generate a `ke
     url       = {https://speedysplat.github.io/}
 }</code></pre>
   </div>
+  <h2 class="title">Related Work</h2>
+  <p>For additional papers on efficient 3D Gaussian Splatting, see our group’s related work below. If your
+      research builds on ours, we encourage you to cite these papers.</p>
+  <ol>
+      <li>
+          <a href="https://pup3dgs.github.io/" target="_blank" rel="noopener">
+              <strong>PUP-3DGS</strong>
+          </a>
+          <em>(CVPR 2025)</em>
+          <small><a href="https://pup3dgs.github.io/#BibTeX" target="_blank">[BibTeX]</a></small>
+          — Prune 90% of primitives from any pretrained 3D Gaussian Splatting model using a mathematically
+          principled sensitivity score, more than tripling rendering speed while retaining more salient
+          foreground information and higher visual fidelity than previous techniques at a substantially
+          higher compression ratio.
+      </li>
+      <li>
+          <a href="https://speede3dgs.github.io/" target="_blank" rel="noopener">
+              <strong>SpeeDe3DGS</strong>
+          </a>
+          <small><a href="https://speede3dgs.github.io/#BibTeX" target="_blank">[BibTeX]</a></small>
+          — Boost DeformableGS rendering speed from 20 to 276 FPS using temporal sensitivity pruning and
+          groupwise SE(3) motion distillation, all while preserving the superior image quality of per-Gaussian
+          neural motion.
+      </li>
+  </ol>
 </section>
 
 
