@@ -1,3 +1,38 @@
+# Speedy-Blobbing: Adaptive Tiled Efficient Splatting
+
+Apart from the original Speedy Splat implementation we made the following changes:
+- `scene/gaussian_model.py`: Records the following during training:
+  - `gaussian_end_parameters.csv`: The parameters at the end of the life of all gaussians (identified with an ID).
+  - `gaussian_start_parameters.csv`: The parameters at the beginning of all gaussians
+  - `gaussian_lifecycle.csv`: The creation time/iteration of all gaussians and their end time/iteration giving us the lifetime in iterations and wall clock
+  - `gaussian_spawned.csv`: A table of parent-child relationships, where a parent is a gaussian, which caused the creation of another one (child)
+- `train.py`: Records the final metrics to `final_metrics.csv`
+- `gaussian_analysis.py`: Plots the lifecycle distribution and puts the gaussians into two categories: Parents and childless
+- `scatter.py`: Creates scatter plots of pairs of parameters and also separates into the two categories.
+- `heatmap.py`: Projects the gaussian blobs, which we consider useless, to the cameras and marks their position in the reference images.
+- `go.sh`: Simply a script to run the training on all inputs
+
+Our hypothesis is that gaussians which are childless and die before the last iteration are unnecessary for the learning and just increase computational cost.
+We are trying to find a heuristic which would separate this group at the time of creation from the rest, in order to prevent their creation.
+That's why we first analysed how many such blobs exist (`gaussian_analysis.py`), which turns out to be the majority.
+Then we tried to infer a rule with the parameters using the scatter plot. No clear distinction could be observed.
+Lastly, we projected the useless blobs as a heatmap onto the cameras and the reference images to see if we could come up with a heuristic based on the reference image we are trying to fit.
+
+
+## TODO
+The heatmaps look like they are shifted. We should check on simple examples if they are correct, meaning writing a simple camera image setup with a handful of blob parameters and see if they end up where we expect them to. Assuming the projection in `heatmap.py` is incorrect and the useless blobs would align nicely with the edges we need to experiment with edge detection algorithms (i.e. canny or difference of gaussians) and prevent densification near the spikes.
+
+
+## Sources
+- Speedy Splat: https://github.com/j-alex-hanson/speedy-splat
+- Viewer: https://antimatter15.com/splat/
+- Inputs: https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/datasets/input/tandt_db.zip
+
+
+
+---
+
+
 # Speedy-Splat: Fast 3D Gaussian Splatting with Sparse Pixels and Sparse Primitives
 
 [Alex Hanson](https://www.cs.umd.edu/~hanson/), [Allen Tu](https://tuallen.github.io), [Geng Lin](https://www.cs.umd.edu/people/geng), [Vasu Singla](https://vasusingla.github.io/), [Matthias Zwicker](https://www.cs.umd.edu/~zwicker/), [Tom Goldstein](https://www.cs.umd.edu/~tomg/)
