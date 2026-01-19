@@ -1,0 +1,17 @@
+ID,Time,Iteration,Operation
+0,8.067340,0,create
+1,8.067340,0,create
+2,8.067340,0,create
+3,8.067340,0,create
+4,8.067340,0,create
+5,8.067340,0,create
+6,8.067340,0,create
+7,8.067340,0,create
+0,16.067340,1,destroy
+1,16.067340,1,destroy
+2,16.067340,1,destroy
+3,16.067340,1,destroy
+4,16.067340,1,destroy
+5,16.067340,1,destroy
+6,16.067340,1,destroy
+7,16.067340,1,destroy
