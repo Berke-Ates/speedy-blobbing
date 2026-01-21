@@ -1,4 +1,4 @@
-# Speedy-Blobbing: Adaptive Tiled Efficient Splatting
+# Adaptive Tiled Efficient Splatting
 
 Apart from the original Speedy Splat implementation we made the following changes:
 - `scene/gaussian_model.py`: Records the following during training:
